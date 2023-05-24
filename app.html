@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title style="color: #000000;">Depression Prediction Web App - Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #98240C, #0B63B0);
+      text-align: center;
+      color: #000000;
+      margin-top: 150px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 100px;
+      display: inline-block;
+    }
+
+    .container h2 {
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .container input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    function redirectToNextPage() {
+      // Display thank you message
+      document.getElementById('message').innerHTML = "Thank you for submitting the form!";
+
+      // Redirect to the next page after 3 seconds (3000 milliseconds)
+      setTimeout(function() {
+        window.location.href = "https://dpc4.carrd.co";
+      }, 3000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Depression Prediction WebApp</h2>
+    <h2>Login</h2>
+    <form onsubmit="redirectToNextPage(); return false;">
+      <label for="name"></label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+      <label for="gender"></label><br>
+      <input type="text" id="gender" name="gender" placeholder="Enter your gender" required><br>
+
+      <label for="email"></label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+      <label for="password"></label><br>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+  </div>
+</body>
+</html>
